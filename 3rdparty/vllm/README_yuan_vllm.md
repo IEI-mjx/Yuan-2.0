@@ -118,7 +118,7 @@ INFO 03-27 08:38:54 async_llm_engine.py:111] Finished request 1d6a3ed293ac40e2ac
 INFO:     127.0.0.1:50013 - "POST /generate HTTP/1.1" 200 OK
 ```
 #### Option 2. 基于命令脚本调用服务
-调用openai.api_server的相关脚本为yuan_api_server.py，内容如下
+调用api_server的相关脚本为yuan_api_server.py，内容如下
 ```bash
 import requests
 import json
@@ -153,7 +153,7 @@ print(outputs)   #可以选择打印输出还是储存到新的jsonl文件
 ...
 
 # 示例中是读取的中文版本humaneval测试集，通过批量调用推理服务并将结果保存在对应的jsonl文件中
-# 您可以代码中读取的jsonl文件路径替换为您的路径
+# 您可以将代码中读取的jsonl文件路径替换为您的路径
 # 或者在此代码基础上进行修改，例如手动传入多个prompts以批量调用api_server进行推理
 ```
 修改完成后运行以下命令脚本调用推理服务即可
